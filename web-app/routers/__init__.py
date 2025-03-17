@@ -1,0 +1,1 @@
+from .pages_router import router as pages_router
