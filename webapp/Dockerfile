@@ -5,6 +5,10 @@ workdir /PythonProject
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+ENV PYTHONPATH=/
 
-CMD ["uvicorn", "webapp-main:app", "--host", "0.0.0.0", "--port", "8000"]
+WORKDIR /
+
+COPY . /webapp
+
+CMD ["uvicorn", "webapp.webapp-main:app", "--host", "0.0.0.0", "--port", "8000"]

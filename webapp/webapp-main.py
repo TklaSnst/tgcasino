@@ -1,5 +1,5 @@
 from pathlib import Path
-from routers import pages_router
+from webapp.routers import pages_router
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from contextlib import asynccontextmanager

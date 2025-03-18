@@ -5,6 +5,10 @@ workdir /PythonProject
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+ENV PYTHONPATH=/
 
-CMD ["python", "bot-main.py"]
+WORKDIR /
+
+COPY . /bot
+
+CMD ["python", "bot/bot-main.py"]
