@@ -1,6 +1,7 @@
 from aiogram import Router
 from aiogram.types import Message
 from aiogram import F
+from bot import Motor
 from bot.keyboards import start_kb
 
 
@@ -20,3 +21,8 @@ async def start(message: Message):
 @router.message(F.text == "/app")
 async def open_webapp(message: Message):
     await message.answer(text='ddd', reply_markup=start_kb)
+
+
+@router.message(F.text == "r")
+async def adduser(message: Message):
+    pass

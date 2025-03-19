@@ -22,3 +22,20 @@ services:
     environment:
       NGROK_AUTHTOKEN: 2n9vnoZIelrdLQvainViTw5TrhS_7Zqf2iYPyE6MuxyymjzVY
     command: "http http://host.docker.internal:8000 --url=vertically-top-cat.ngrok-free.app"
+
+  redis:
+    image: redis:7.4.2
+    ports:
+      - "6379:6379"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    env_file: .env
+
+  mongo:
+    image: mongo
+    restart: always
+    env_file: .env
+    ports:
+      - "27017:27017"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

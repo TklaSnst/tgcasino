@@ -11,7 +11,7 @@ router = APIRouter(
 )
 
 templates_path = Path(__file__).parent / "templates"
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="webapp/templates")
 
 
 @router.get("/main/")
