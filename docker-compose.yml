@@ -2,7 +2,8 @@ version: "3"
 
 services:
   bot:
-    build: ./bot
+    build:
+      dockerfile: botDockerfile
     container_name: telegram_bot
     depends_on:
       - webapp
@@ -11,7 +12,8 @@ services:
     env_file: .env
 
   webapp:
-    build: ./webapp
+    build:
+      dockerfile: webappDockerfile
     container_name: fastapi_site
     ports:
       - "8000:8000"

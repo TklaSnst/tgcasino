@@ -36,7 +36,7 @@ class Motor:
         :return: ID вставленного пользователя.
         """
         if self.collection.find_one({"username": user.username}):
-            return None
+            return "user is already exists"
 
         result = await self.collection.insert_one(*user)
 

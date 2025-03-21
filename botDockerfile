@@ -9,6 +9,8 @@ ENV PYTHONPATH=/
 
 WORKDIR /
 
-COPY . /bot
+COPY /webapp /webapp
+COPY /bot /bot
+COPY /database /database
 
 CMD ["python", "bot/bot-main.py"]
