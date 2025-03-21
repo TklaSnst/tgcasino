@@ -1,7 +1,7 @@
 from aiogram import Router
 from aiogram.types import Message
 from aiogram import F
-from bot import Motor
+from database.database import Motor
 from bot.keyboards import start_kb
 
 
@@ -14,7 +14,7 @@ async def start(message: Message):
 
 
 # @router.message()
-# async def echo(message: Message):
+# async def echo(message: Message):penis
 #     await message.answer('sosi '  + message.text)
 
 
