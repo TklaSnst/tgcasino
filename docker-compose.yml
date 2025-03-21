@@ -39,3 +39,11 @@ services:
       - "27017:27017"
     extra_hosts:
       - "host.docker.internal:host-gateway"
+    volumes:
+      - ./db-data:/data/db
+    networks:
+      - main
+
+networks:
+  main:
+    driver: bridge
