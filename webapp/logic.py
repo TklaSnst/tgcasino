@@ -10,6 +10,3 @@ def start():
     return print(f'a = {a} - black')
 
 start()
-
-
-
