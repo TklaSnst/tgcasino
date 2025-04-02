@@ -1,8 +1,8 @@
 from aiogram import Router
-from aiogram.types import Message
+from aiogram.types import Message, CallbackQuery
 from aiogram import F
 from database import Motor, AddUserSchema
-from bot.keyboards import get_start_kb
+from bot.keyboards import get_start_kb, test_kb
 import os
 
 
@@ -20,6 +20,8 @@ async def start(message: Message):
         text=f"Hello, {message.from_user.username}! Here's options...",
         reply_markup=await get_start_kb(tg_id=message.from_user.id)
     )
+
+
 
 
 # @router.message()

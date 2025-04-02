@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet"   href="../static/style.css">
+    <link rel="stylesheet" href="../static/style.css">
     <title>Document</title>
 </head>
 <body>
@@ -27,26 +27,33 @@
     </header>
     <div>
         <div class="roulette">
+
             <div class="roulette-controls">
+                <div class="input-container">
+                    <input placeholder="Enter your bet" class="bet-enter" />
+                </div>
                 <div class="controls-grid">
-                    <div class="bet-enter">
-                        <input placeholder="Enter your bet"/>
+                    <div class="button-container">
+                        <button class="button button-red">Bet 2x</button>
                     </div>
                     <div class="button-container">
-                        <button class="button button-green">Bet</button>
-                    </div>
-                    <div class="button-container">
-                        <button class="button button-red">Bet</button>
-                    </div>
-                    <div class="button-container">
-                        <button class="button button-black">Bet</button>
+                        <button class="button button-black">Bet 2x</button>
                     </div>
                 </div>
+                <div class="button-container">
+                    <button class="button button-green" onclick=set_degree()>Bet 10x</button>
+                </div>
             </div>
+
+            <br>
+            <div style='text-align: center;'>I<div>
+
             <div class="roulette-main">
-                <img src="../static/roulette.png" alt="" class="roulette-image">
+                <img src="../static/roulette.png" alt="" class="roulette-image" id='wheel'>
             </div>
+
         </div>
     </div>
+    <script src="../static/script.js"></script>
 </body>
 </html>

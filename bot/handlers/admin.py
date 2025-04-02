@@ -2,7 +2,6 @@ from aiogram.types import CallbackQuery, Message
 from bot.keyboards import adm_main_kb
 from aiogram import Router
 from aiogram import F
-import os
 
 
 router = Router()

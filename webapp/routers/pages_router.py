@@ -22,3 +22,7 @@ async def main_page(request: Request, response: Response):
     v['balance'] = 100
     v['username'] = "pampersss"
     return templates.TemplateResponse('main.html', v)
+
+
+# @router.post("/game/")
+# async def game_start(bet: int, ):

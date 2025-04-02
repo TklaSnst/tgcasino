@@ -2,5 +2,7 @@ from aiogram.types import InlineKeyboardMarkup, KeyboardButton, InlineKeyboardBu
 import os
 
 adm_main_kb = InlineKeyboardMarkup(inline_keyboard=[
-    [InlineKeyboardButton(text="", callback_data="")]
+    [InlineKeyboardButton(text="ban_user", callback_data="")],
+    [InlineKeyboardButton(text="get_user", callback_data="")],
+    [InlineKeyboardButton(text="return", callback_data="")]
 ])
